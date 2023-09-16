@@ -14,6 +14,12 @@
   <script src="Index.js"></script>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aboreto&family=Akronim&family=Arapey:ital@1&family=Slabo+27px&display=swap"
+    rel="stylesheet">
   <style>
     @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
@@ -50,14 +56,14 @@
     header .logo {
       position: relative;
       font-weight: 700;
-      color: #d5074d;
+      color: #d1d1d1;
       text-decoration: none;
       font-size: 2em;
       text-transform: uppercase;
       letter-spacing: 2px;
       transition: 0.6s;
-      border-bottom: 2px solid #d5074d;
-      border-top: 2px solid #d5074d;
+      border-bottom: 2px solid #d1d1d1;
+      border-top: 2px solid #d1d1d1;
     }
 
     header .logo:hover {
@@ -110,7 +116,7 @@
     }
 
     header.sticky .logo {
-      color: #d5074d;
+      color: #d1d1d1;
     }
 
     header.sticky ul li a:hover {
@@ -118,16 +124,30 @@
     }
 
     .container {
-      position: absolute;
+      position: relative;
       left: 0;
       top: 0;
       width: 100%;
       height: 640px;
-      animation: animate 30s ease-in-out infinite;
       background-size: cover;
       background-repeat: no-repeat;
       border-bottom: 2px solid #d5074d;
-      opacity: 0.7;
+    }
+
+    .container::before {
+      content: "";
+      /* background-image: url("C:\\JavaScript Project\\All Images\\ezgif.com-webp-to-jpg.jpg"); */
+      background-repeat: no-repeat;
+      animation: animate 30s ease-in-out infinite;
+
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.4;
     }
 
     .outer {
@@ -142,22 +162,22 @@
 
       0%,
       100% {
-        background-image: url("C:\\JavaScript Project\\All Images\\ezgif.com-webp-to-jpg.jpg");
+        background-image: url("./All Images/ezgif.com-webp-to-jpg.jpg");
         background-size: 100% 640px;
       }
 
       25% {
-        background-image: url("C:\\JavaScript Project\\All Images\\Dodgeball.jpg ");
+        background-image: url("./All Images/Dodgeball.jpg ");
         background-size: 100% 640px;
       }
 
       50% {
-        background-image: url("C:\\JavaScript Project\\All Images\\Sepak3.jpeg");
+        background-image: url("./All Images/Sepak3.jpeg");
         background-size: 100% 640px;
       }
 
       75% {
-        background-image: url("C:\\JavaScript Project\\All Images\\TennisBall cricket.jpg");
+        background-image: url("./All Images/TennisBall cricket.jpg");
         background-size: 100% 640px;
       }
     }
@@ -168,7 +188,7 @@
       height: 200px;
       margin-top: 100px;
       font-size: 30px;
-      animation: bounce 1s ease-in-out infinite alternate;
+
       color: white;
     }
 
@@ -201,11 +221,11 @@
 
     /* Media quary for Responsive web site  */
 
-    @media (max-width: 712px) {
+    @media (max-width: 750px) {
 
       /* header ul li {
-    display: none;
-  } */
+display: none;
+} */
       /* This is the media tag wuary for navi gation bar  */
       header ul {
         display: block;
@@ -248,9 +268,24 @@
       padding: 8px 8px 8px 32px;
       text-decoration: none;
       font-size: 25px;
+      font-family: "Aboreto", cursive;
+      font-family: "Akronim", cursive;
+      font-family: "Arapey", serif;
+      font-family: "Slabo 27px", serif;
       color: #818181;
       display: block;
       transition: 0.3s;
+    }
+
+    #navigationStyle {
+      border-bottom: 1px solid #fff;
+      padding: 20px;
+    }
+
+    #navigationStyle:hover {
+      background-color: #2a2828;
+      font-size: 30px;
+      border-bottom: 1px solid #d5074d;
     }
 
     .sidenav a:hover {
@@ -260,9 +295,9 @@
     .sidenav .closebtn {
       position: absolute;
       top: 0;
-      right: 25px;
+      /* right: 25px; */
       font-size: 36px;
-      margin-left: 50px;
+      margin-left: 180px;
     }
 
     @media screen and (max-height: 450px) {
@@ -305,10 +340,11 @@
 
     #HeadingFirst {
       margin-left: 40px;
-      margin-top: 200px;
+      margin-top: 150px;
       font-family: "Aboreto", cursive;
       font-family: "Akronim", cursive;
       font-family: "Arapey", serif;
+      text-align: center;
       font-size: 100px;
     }
 
@@ -319,7 +355,8 @@
     }
 
     #SA {
-      font-size: 40%;
+      font-size: 30%;
+      margin-left: -30px;
     }
 
     #details {
@@ -327,9 +364,21 @@
       padding-left: 40px;
       font-size: 20px;
       padding-top: 20px;
+      text-align: center;
+      transition: 2s;
+    }
+
+    #details:hover {
+      font-size: 25px;
+      transition: 2s;
+      color: aquamarine;
     }
 
     @media (max-width: 750px) {
+      #SA {
+        font-size: 35%;
+      }
+
       #HeadingFirst {
         margin-left: 10px;
         margin-top: 150px;
@@ -339,6 +388,7 @@
       #details {
         padding-left: 10px;
         font-size: 20px;
+        text-align: center;
       }
 
       .container {
@@ -349,28 +399,96 @@
 
         0%,
         100% {
-          background-image: url("/All Images/ezgif.com-webp-to-jpg.jpg");
+          background-image: url("./All Images/ezgif.com-webp-to-jpg.jpg");
           background-size: 100% 700px;
         }
 
         25% {
-          background-image: url("/All Images/Dodgeball.jpg ");
+          background-image: url("./All Images/Dodgeball.jpg ");
           background-size: 100% 700px;
         }
 
         50% {
-          background-image: url("/All Images/Sepak3.jpeg");
+          background-image: url("./All Images/Sepak3.jpeg");
           background-size: 100% 700px;
         }
 
         75% {
-          background-image: url("/All Images/TennisBall cricket.jpg");
+          background-image: url("./All Images/TennisBall cricket.jpg");
           background-size: 100% 700px;
         }
       }
 
       .icon {
         margin-top: 600px;
+      }
+    }
+
+    .animationtext {
+      text-transform: uppercase;
+      background-image: linear-gradient(-225deg,
+          #ffffff 0%,
+          #95909b 29%,
+          #ff1361 67%,
+          #fff800 100%);
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      /* text-fill-color: transparent; */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      /* display: inline-block; */
+      font-size: 140px;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    @media (max-width: 750px) {
+      .animationtext {
+        font-size: 100px;
+      }
+
+      .SA {
+        font-size: 50%;
+      }
+    }
+
+    .SA {
+      /* text-transform: uppercase; */
+      background-image: linear-gradient(-225deg,
+          #ffffff 0%,
+          #95909b 29%,
+          #ff1361 67%,
+          #fff800 100%);
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      /* text-fill-color: transparent; */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip2 2s linear infinite;
+      /* display: inline-block; */
+      font-size: 140px;
+    }
+
+    @keyframes textclip2 {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    @media (max-width: 750px) {
+      .animationtext {
+        font-size: 100px;
       }
     }
   </style>
@@ -392,12 +510,12 @@
       <li id="NavigationBarDeopudown"><a href="#">
           <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Home</a>
+            <a href="#" id="navigationStyle">Home</a>
             <!-- <a href="#">About</a> -->
-            <a href="#">Games</a>
-            <a href="#">MKV</a>
-            <a href="#">Association</a>
-            <a href="#">Contact</a>
+            <a href="#" id="navigationStyle">Games</a>
+            <a href="#" id="navigationStyle">MKV <span style="font-size: 70%; word-spacing: 0;">Sport</span></a>
+
+            <a href="#" id="navigationStyle">Contact</a>
           </div>
 
           <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
@@ -406,7 +524,7 @@
       <!-- <li><a href="#">About</a></li> -->
       <li><a href="#">Games</a></li>
       <li><a href="#">MKV</a></li>
-      <li><a href="#">Association</a></li>
+
       <li><a href="#">Contact</a></li>
     </ul>
 
@@ -416,7 +534,7 @@
     <div class="container">
       <div class="outer">
         <div class="details">
-          <h1 id="HeadingFirst"> <span id="MKV"> MKV </span><span id="SA">Sport
+          <h1 id="HeadingFirst"> <span id="MKV" class="animationtext"> MKV </span><span id="SA" class="SA">Sport
               Academy</span></h1>
 
           <p id="details"><span>A full
@@ -431,6 +549,21 @@
         </div>
       </div>
     </div>
+
+  </section>
+
+  <section>
+    <p style="color: red;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius asperiores, aliquid non,
+      veniam provident
+      necessitatibus incidunt error ipsam, alias tempora deleniti ratione sed modi esse debitis facilis qui ullam
+      vel
+      adipisci harum consequatur eveniet officia obcaecati! At accusamus sapiente eos temporibus laboriosam
+      voluptatibus corporis dolor cupiditate labore eaque, ut dolorem totam neque ratione consequuntur similique
+      vel
+      hic libero. Natus, possimus ipsam cum aperiam consequuntur, distinctio vero nostrum adipisci et alias illo
+      repellendus ea dolorum perspiciatis. Ipsa ipsam in similique laborum molestiae cumque nisi sunt quam nemo
+      maxime
+      facilis, debitis, est odit fuga, minima quaerat! Numquam dolores reiciendis accusamus quia voluptates.</p>
   </section>
 
   <script>
@@ -447,8 +580,6 @@
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
-
-
 </body>
 
 </html>
